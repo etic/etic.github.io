@@ -179,7 +179,7 @@
     }
   
    }
-   loadPackage({"files": [{"filename": "/data.bundle", "start": 0, "end": 893}], "remote_package_size": 893, "package_uuid": "cd94a053-5380-4d07-b7a4-aa783a0ab337"});
+   loadPackage({"files": [{"filename": "/data.bundle", "start": 0, "end": 597}], "remote_package_size": 597, "package_uuid": "e4a2120a-ec34-4f05-bd18-de5200e7efbd"});
   
   })();
   
