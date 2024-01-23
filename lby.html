@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Lewis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="chris-lewis-avatar.png" alt="Chris Lewis" class="avatar">
+        <p class="title">Chris Lewis</p>
+        <p>Senior Technical Artist</p>
+        <nav class="header-menu">
+            <a href="index.html" class="header-menu-item">Home</a>
+            <a href="lby.html" class="header-menu-item">Life by You</a>
+            <a href="pgo.html" class="header-menu-item">Pokémon GO</a>
+            <a href="https://www.linkedin.com/in/clewis3d/" class="header-menu-item">Resume</a>
+        </nav>
+    </header>
+    <main class="container">
+        <article>
+            <h1>Life by You</h1>
+            <h2>Paradox Tectonic</h2>
+            <p>Life by You is a life sim game by Paradox Tectonic. I helped as a technical artist on lighting, modder
+                tools, shaders, vfx, and animations.</p>
+
+            <h3>Lighting</h3>
+            <p>I added ambient interior lighting that scales with time of day and culled lights + shadows so they fade
+                in and out based on distance to the camera. I also added support for allowing players to turn on and off
+                lights and made lights automatically turn on/off when humans enter and exit a building.</p>
+            <img src="img/IMG_1201.png" alt="">
+            <h3>Time of Day</h3>
+            <p>I tuned the time of day lighting and postprocessing system and added support for blending between
+                postprocessing volumes and other lighting data based on the current time. In the final screenshot,
+                I simulated and baked a fire simulation in Blender to make the campfire effect.</p>
+            <img src="img/IMG_1118.png" alt="">
+            <img src="img/IMG_1202.png" alt="">
+            <img src="img/IMG_1203.png" alt="">
+            <img src="img/IMG_1198.png" alt="">
+            <h3>Modder Tools</h3>
+            <p>To fully test clothing assets, artists needed to view the clothing layered on top of other clothing and
+                on characters with different body proportions. I created a clothing test tool to quickly build outfits
+                and adjust character sliders.</p>
+            <img src="img/IMG_1194.png" alt="">
+            <p>To create interactions and behaviors in the game we developed a visual scripting system that runs
+                in-game. I skinned the editor and added a number of scripting nodes to the system.</p>
+            <img src="img/IMG_1195.png" alt="">
+            <p>Characters are created with the UMA unity asset which has a complex setup. I created a wizard to generate
+                the UMA-specific assets for every type of clothing asset in the game. The wizard itself is a
+                ScriptableObject so that the UMA assets can be quickly re-generated if the base models or textures
+                change.</p>
+            <img class="clothing-settings" src="img/IMG_1196.png" alt="">
+            <h3>Face Texture Baking System</h3>
+            <p>One request from the artists was to be able to have a variable number of textures on the face, for
+                tattoos and details like moles and wrinkles. Initially the face was a single shader but we broke it into
+                a multi-step baking process where an albedo, normal, and mask texture are all composited separately and
+                put together in a final shader. The final shader only needs four textures but supports a wide amount of
+                customization.</p>
+            <p>First shader of the face texture system</p>
+            <img src="img/IMG_1191.png" alt="">
+            <p>Repeatable tattoo shader of the face texture system</p>
+            <img src="img/IMG_1192.png" alt="">
+            <p>Final shader of the face texture system</p>
+            <img src="img/IMG_1190.png" alt="">
+            <p>Face with multiple placeable tattoos applied</p>
+            <img src="img/IMG_1200.png" alt="">
+            <h3>Bed Sheet Effect</h3>
+            <p>To have characters under bed sheets, I created a vertex shader that offsets the bed sheets based on
+                colliders attached to the human. This allows the humans to move under the covers and still show motion
+                on the bed sheets.</p>
+            <img src="img/IMG_1204.png" alt="">
+        </article>
+    </main>
+</body>
+
+</html>

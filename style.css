@@ -1,0 +1,132 @@
+header img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 5px solid #a7c957;
+}
+
+body {
+    background-color: #f2e8cf;
+    font-family: 'Poppins';
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #386641;
+    color: #6a994e;
+    min-height: 100vh;
+}
+
+p {
+    line-height: 1.3rem;
+}
+
+header p {
+    color: #6a994e;
+    line-height: 2rem;
+}
+
+.title {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+header a {
+    color: #a7c957;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+header nav a {
+    margin: 3px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    margin: 3px;
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    margin-left: 20rem;
+    max-width: 65rem;
+    padding: 2.5rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+h1 {
+    color: #bc4749;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+main img {
+    width: 100%;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-row-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.img-3 {
+    width: 30%;
+    display: inline-block;
+}
+
+.clothing-settings {
+    max-width: 400px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
