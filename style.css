@@ -12,17 +12,12 @@ body {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #386641;
     color: #6a994e;
-    min-height: 100vh;
 }
 
 p {
@@ -63,7 +58,6 @@ header nav a:hover {
 }
 
 main {
-    margin-left: 20rem;
     max-width: 65rem;
     padding: 2.5rem;
     padding-left: 10%;
@@ -129,4 +123,26 @@ main img {
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+@media (min-width: 900px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20rem;
+        min-height: 100vh;
+    }
+
+    main {
+        margin-left: 20rem;
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 2rem;
+    }
+
+
 }
