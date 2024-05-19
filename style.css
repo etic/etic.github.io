@@ -7,8 +7,8 @@ header img {
 }
 
 body {
-    background-color: #f2e8cf;
-    font-family: 'Poppins';
+    background-color: #fff;
+    font-family: "Noto Sans", sans-serif;
 }
 
 header {
@@ -16,26 +16,27 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #386641;
+    background-color: #eee;
     color: #6a994e;
 }
 
 p {
-    line-height: 1.3rem;
+    line-height: 1.5rem;
 }
 
 header p {
-    color: #6a994e;
+    color: #999;
     line-height: 2rem;
 }
 
 .title {
-    color: #fff;
+    color: #a7c957;
     font-size: 2.5rem;
+    font-weight: 500;
 }
 
 header a {
-    color: #a7c957;
+    color: #666;
 }
 
 header nav {
@@ -54,7 +55,7 @@ header nav a {
 header nav a:hover {
     margin: 3px;
     text-decoration: none;
-    color: #fff;
+    color: #aaa;
 }
 
 main {
@@ -65,21 +66,24 @@ main {
 }
 
 h1 {
-    color: #bc4749;
+    color: #000;
+    text-transform: uppercase;
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 h2 {
-    color: #333;
+    color: #a7c957;
     font-size: 2rem;
+    font-weight: 300;
     margin-bottom: 1rem;
 }
 
 h3 {
-    color: #333;
+    color: #666;
     font-size: 1.5rem;
     margin-top: 2rem;
+    font-weight: 400;
 }
 
 article {
@@ -87,11 +91,17 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #444;
+    font-size: 0.9rem;
 }
 
 main p {
     margin-bottom: 1rem;
     margin-top: 1rem;
+}
+
+main b {
+    font-weight: 700;
 }
 
 main img {
