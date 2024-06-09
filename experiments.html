@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Lewis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="chris-lewis-avatar.png" alt="Chris Lewis" class="avatar">
+        <p class="title">Chris Lewis</p>
+        <p>Senior Technical Artist</p>
+        <nav class="header-menu">
+            <a href="index.html" class="header-menu-item">Home</a>
+            <a href="lby.html" class="header-menu-item">Life by You</a>
+            <a href="pgo.html" class="header-menu-item">Pokémon GO</a>
+            <a href="experiments.html" class="header-menu-item">Experiments</a>
+            <a href="https://www.linkedin.com/in/clewis3d/" class="header-menu-item">Resume</a>
+        </nav>
+    </header>
+    <main class="container">
+        <article>
+            <h1>Experients</h1>
+
+            <h3>Wobbleton</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fB3dZDfhHbk?si=NBeR6to91ufGJ2yK"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Wobbleton is a stylized building toy inspired by Townscaper and Dr. Seuss. <a
+                    href="https://etic.itch.io/wobbleton">Play here.</a></p>
+            <p>The toy lets users fill and clear cells in a 3D grid which results in a building. When the grid is
+                updated, meshes are generated to fit the 3D grid. The positions and normals of the meshes are distorted
+                by a perlin noise field to achieve a dr seuss-like effect. Because the meshes are distorted directly
+                instead of through a shader, we can use them as mesh colliders to handle player interaction. This perlin
+                noise field is used to transform the positions of smaller objects and particle effects as well.</p>
+            <p>The meshes used to fill the 3D grid are chosen through wave function collapse (WFC). One at a time,
+                pieces are randomly chosen that can fit in the gaps of the parts of the 3D grid that were modified.
+                Then, any old pieces that were in the way are removed and any remaining gaps from that are filled in. To
+                determine if a piece can fit in a particular location, each piece has a list of cells relative to its
+                origin that must be filled or empty. Pieces can be rotated 90 degrees on the Y axis, so each piece has
+                four possible configurations for its filled and empty cells.</p>
+            <p>Two grids are used to represent the building, an occupancy grid and an asset grid. The occupancy grid
+                stores bool values for whether a cell is filled or not. The asset grid holds references to the meshes
+                spawned in the world. The structure of the grid went through two iterations. First, a grid the same size
+                as the occupancy grid was used which had references to all 6 faces of each cell. However this
+                complicated the WFC code because faces needed to be explicitly specified, so the asset grid was updated
+                to be twice as large as the occupancy grid and pointed to the meshes directly. An individual cell in
+                this grid could refer to the center of a cell, a face, an edge, or a corner of a mesh depending on its
+                location. This let the WFC code iterate over the assets uniformly.</p>
+            <p>A rippling effect happens through the structure when you add or remove a block. This was accomplished
+                with a vertex shader, which uses a position at the center of the target block and distorts the mesh at a
+                given radius away from the center, which increases over time. The animation of the particles when you
+                remove a block are also driven by a shader, which simulates a light moving over a sphere. A third party
+                shader was used for the outline effect.</p>
+        </article>
+    </main>
+</body>
+
+</html>

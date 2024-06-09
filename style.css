@@ -113,6 +113,10 @@ main img {
     width: 100%;
 }
 
+main a {
+    color: #72902d;
+}
+
 .image-row {
     display: flex;
     justify-content: space-between;
