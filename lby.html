@@ -36,19 +36,14 @@
             <p>Life by You is a life sim game by Paradox Tectonic. I helped as a technical artist on lighting, modder
                 tools, shaders, vfx, and animations.</p>
 
-            <h3>Lighting</h3>
-            <p>I added ambient interior lighting that scales with time of day and culled lights + shadows so they fade
-                in and out based on distance to the camera. I also added support for allowing players to turn on and off
-                lights and made lights automatically turn on/off when humans enter and exit a building.</p>
-            <img src="img/IMG_1201.PNG" alt="">
-            <h3>Time of Day</h3>
-            <p>I tuned the time of day lighting and postprocessing system and added support for blending between
-                postprocessing volumes and other lighting data based on the current time. In the final screenshot,
-                I simulated and baked a fire simulation in Blender to make the campfire effect.</p>
-            <img src="img/IMG_1118.PNG" alt="">
-            <img src="img/IMG_1202.PNG" alt="">
-            <img src="img/IMG_1203.PNG" alt="">
-            <img src="img/IMG_1198.PNG" alt="">
+            <h3>Animation</h3>
+            <p>Characters in Life by You can be variable heights which means that animations with objects and other
+                people need to be modified to match the heights of the given humans. To handle this we used the third
+                party package FinalIK to let characters reach target positions. FinalIK doesn't come with animation
+                tools however, so I built a pipeline for adding in-game IK effects per-animation as well as hooking up
+                IK to the game's animation logic. This let animators specify if an animation requires interaction with
+                an object or another human, and if so which parts of the body should follow which parts of the target
+                object.</p>
             <h3>Modder Tools</h3>
             <p>To fully test clothing assets, artists needed to view the clothing layered on top of other clothing and
                 on characters with different body proportions. I created a clothing test tool to quickly build outfits
@@ -76,6 +71,20 @@
             <img src="img/IMG_1190.PNG" alt="">
             <p>Face with multiple placeable tattoos applied</p>
             <img src="img/IMG_1200.PNG" alt="">
+
+            <h3>Lighting</h3>
+            <p>I added ambient interior lighting that scales with time of day and culled lights + shadows so they fade
+                in and out based on distance to the camera. I also added support for allowing players to turn on and off
+                lights and made lights automatically turn on/off when humans enter and exit a building.</p>
+            <img src="img/IMG_1201.PNG" alt="">
+            <h3>Time of Day</h3>
+            <p>I tuned the time of day lighting and postprocessing system and added support for blending between
+                postprocessing volumes and other lighting data based on the current time. In the final screenshot,
+                I simulated and baked a fire simulation in Blender to make the campfire effect.</p>
+            <img src="img/IMG_1118.PNG" alt="">
+            <img src="img/IMG_1202.PNG" alt="">
+            <img src="img/IMG_1203.PNG" alt="">
+            <img src="img/IMG_1198.PNG" alt="">
             <h3>Bed Sheet Effect</h3>
             <p>To have characters under bed sheets, I created a vertex shader that offsets the bed sheets based on
                 colliders attached to the human. This allows the humans to move under the covers and still show motion
