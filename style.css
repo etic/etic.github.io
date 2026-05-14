@@ -34,6 +34,7 @@ header p {
     font-family: "Playfair Display", Georgia, serif;
     font-size: 2.8rem;
     font-weight: 800;
+    margin-bottom: 0.75rem;
 }
 
 header a {
@@ -44,7 +45,7 @@ header nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 20px;
 }
 
@@ -54,9 +55,23 @@ header nav a {
 }
 
 header nav a:hover {
-    margin: 3px;
-    text-decoration: none;
     color: #2d5c8e;
+}
+
+.header-menu-item {
+    margin: 6px 0;
+}
+
+.header-menu-item::before {
+    content: "• ";
+    color: #9aa3a8;
+    margin-right: 0.3em;
+}
+
+.header-menu-item[href^="http"]::after {
+    content: " ↗";
+    color: #9aa3a8;
+    font-size: 0.85em;
 }
 
 main {
@@ -172,6 +187,7 @@ main a {
         left: 0;
         width: 20rem;
         min-height: 100vh;
+        border-right: 1px solid #c8ccc4;
     }
 
     main {
