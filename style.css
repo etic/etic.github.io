@@ -3,11 +3,11 @@ header img {
     width: 200px;
     height: 200px;
     margin-bottom: 20px;
-    border: 5px solid #a7c957;
+    border: 5px solid #2d5c8e;
 }
 
 body {
-    background-color: #fff;
+    background-color: #f4f5f2;
     font-family: "Newsreader", Georgia, serif;
 }
 
@@ -16,8 +16,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #eee;
-    color: #6a994e;
+    background-color: #e5e7e2;
+    color: #2d5c8e;
 }
 
 p {
@@ -25,19 +25,19 @@ p {
 }
 
 header p {
-    color: #999;
+    color: #6b7280;
     line-height: 2rem;
 }
 
 .title {
-    color: #a7c957;
+    color: #2d5c8e;
     font-family: "Playfair Display", Georgia, serif;
     font-size: 2.8rem;
     font-weight: 800;
 }
 
 header a {
-    color: #666;
+    color: #4a5366;
 }
 
 header nav {
@@ -56,7 +56,7 @@ header nav a {
 header nav a:hover {
     margin: 3px;
     text-decoration: none;
-    color: #aaa;
+    color: #2d5c8e;
 }
 
 main {
@@ -67,7 +67,7 @@ main {
 }
 
 h1 {
-    color: #a7c957;
+    color: #2d5c8e;
     font-size: 5rem;
     padding-top: 1rem;
     font-family: "Playfair Display", Georgia, serif;
@@ -75,14 +75,14 @@ h1 {
 }
 
 h2 {
-    color: #999;
+    color: #6b7280;
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 1rem;
 }
 
 h3 {
-    color: #666;
+    color: #4a5366;
     font-family: "Playfair Display", Georgia, serif;
     font-size: 2rem;
     margin-top: 2rem;
@@ -95,7 +95,7 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #444;
+    color: #1a1f2a;
     font-size: 1.125rem;
     line-height: 1.65;
 }
@@ -114,7 +114,7 @@ main img {
 }
 
 main a {
-    color: #72902d;
+    color: #1e4267;
 }
 
 .image-row {
@@ -144,12 +144,16 @@ main a {
     height: 100vh;
 }
 
+.about img {
+    mix-blend-mode: multiply;
+}
+
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    max-width: 100%;
+    width: 100%;
     margin: 1rem 0;
 }
 
