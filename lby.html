@@ -26,11 +26,14 @@
     <header>
         <img src="chris-lewis-avatar.png" alt="Chris Lewis" class="avatar">
         <p class="title">Chris Lewis</p>
-        <p>Software Engineer</p>
+        <p>Technical Artist</p>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle menu"></label>
         <nav class="header-menu">
             <a href="index.html" class="header-menu-item">Home</a>
-            <a href="lby.html" class="header-menu-item">Life by You</a>
+            <a href="zeromatter.html" class="header-menu-item">Zeromatter</a>
             <a href="pgo.html" class="header-menu-item">Pokémon GO</a>
+            <a href="lby.html" class="header-menu-item">Life by You</a>
             <a href="experiments.html" class="header-menu-item">Experiments</a>
             <a href="https://www.linkedin.com/in/clewis3d/" class="header-menu-item">Resume</a>
         </nav>
@@ -40,8 +43,9 @@
             <h1>Life by You</h1>
             <h2>Paradox Tectonic</h2>
             <p class="meta">2021–2024 · C# · HLSL · Maya · Unity HDRP</p>
-            <p>Life by You is a life sim game by Paradox Tectonic. I built animation tooling, modder-facing
-                tools, and a multi-step face texture baking pipeline, plus lighting and shader work.</p>
+            <p>Life by You is a life sim game by Paradox Tectonic, built in Unity HDRP. As a technical artist I helped
+                across art and engineering, including C# editor tooling and asset pipelines, modder-facing tools, a
+                multi-step face texture baking pipeline, and lighting and shader work tuned for performance.</p>
 
             <h3>Animation</h3>
             <p>Characters in Life by You can be variable heights which means that animations with objects and other
@@ -82,8 +86,8 @@
             <img src="img/IMG_1200.PNG" alt="">
 
             <h3>Lighting</h3>
-            <p>I added ambient interior lighting that scales with time of day and culled lights + shadows so they fade
-                in and out based on distance to the camera. I also added support for allowing players to turn on and off
+            <p>I added ambient interior lighting that scales with time of day and culled lights + shadows by distance
+                to the camera to cut rendering cost, fading them in and out so the optimization stays invisible. I also added support for allowing players to turn on and off
                 lights and made lights automatically turn on/off when humans enter and exit a building.</p>
             <img src="img/IMG_1201.PNG" alt="">
             <h3>Time of Day</h3>
