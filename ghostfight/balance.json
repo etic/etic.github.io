@@ -1,0 +1,515 @@
+{
+  "globals": {
+    "energyPerTurn": 3,
+    "handSize": 5,
+    "switchCost": 1,
+    "dreamsMax": 6,
+    "grudgePerBenchHit": 2,
+    "tallowBenchHeal": 2,
+    "betweenBattleHeal": 15
+  },
+  "cards": {
+    "lashOut": {
+      "owner": "rue",
+      "name": "Lash Out",
+      "cost": 1,
+      "text": "Deal {dmg} + Grudge.",
+      "v": {
+        "dmg": 6
+      }
+    },
+    "shroud": {
+      "owner": "rue",
+      "name": "Shroud",
+      "cost": 1,
+      "text": "Block {block}.",
+      "v": {
+        "block": 5
+      }
+    },
+    "spite": {
+      "owner": "rue",
+      "name": "Spite",
+      "cost": 1,
+      "text": "Gain {thorns} Thorns this turn.",
+      "v": {
+        "thorns": 3
+      }
+    },
+    "haunt": {
+      "owner": "rue",
+      "name": "Haunt",
+      "cost": 1,
+      "text": "Deal {dmg} + Grudge. Gain {grudge} Grudge.",
+      "v": {
+        "dmg": 5,
+        "grudge": 1
+      }
+    },
+    "grimPatience": {
+      "owner": "rue",
+      "name": "Grim Patience",
+      "cost": 1,
+      "text": "Block {block}. Gain {grudge} Grudge.",
+      "v": {
+        "block": 6,
+        "grudge": 1
+      }
+    },
+    "simmer": {
+      "owner": "rue",
+      "name": "Simmer",
+      "cost": 0,
+      "text": "Gain {grudge} Grudge.",
+      "v": {
+        "grudge": 2
+      }
+    },
+    "retribution": {
+      "owner": "rue",
+      "name": "Retribution",
+      "cost": 2,
+      "text": "Deal {mult}× Grudge. Spend all Grudge.",
+      "v": {
+        "mult": 3
+      }
+    },
+    "portent": {
+      "owner": "sybil",
+      "name": "Portent",
+      "cost": 1,
+      "text": "Prophecy — in {turns} turns: deal {dmg}.",
+      "v": {
+        "dmg": 18,
+        "turns": 2
+      }
+    },
+    "doomsay": {
+      "owner": "sybil",
+      "name": "Doomsay",
+      "cost": 2,
+      "text": "Prophecy — in {turns} turns: deal {dmg}.",
+      "v": {
+        "dmg": 30,
+        "turns": 3
+      }
+    },
+    "mendFate": {
+      "owner": "sybil",
+      "name": "Mend Fate",
+      "cost": 1,
+      "text": "Prophecy — in {turns} turns: heal the active ghost {heal}.",
+      "v": {
+        "heal": 12,
+        "turns": 3
+      }
+    },
+    "inevitability": {
+      "owner": "sybil",
+      "name": "Inevitability",
+      "cost": 2,
+      "text": "Prophecy — in {turns} turn: deal {dmg}.",
+      "v": {
+        "dmg": 8,
+        "turns": 1
+      }
+    },
+    "glimpse": {
+      "owner": "sybil",
+      "name": "Glimpse",
+      "cost": 0,
+      "text": "Reveal the enemy's next {reveal} intents this turn.",
+      "v": {
+        "reveal": 2
+      }
+    },
+    "twistOfFate": {
+      "owner": "sybil",
+      "name": "Twist of Fate",
+      "cost": 1,
+      "text": "Swap the enemy's next two intents.",
+      "v": {}
+    },
+    "veil": {
+      "owner": "sybil",
+      "name": "Veil",
+      "cost": 1,
+      "text": "Block {block}.",
+      "v": {
+        "block": 5
+      }
+    },
+    "secondSight": {
+      "owner": "sybil",
+      "name": "Second Sight",
+      "cost": 1,
+      "text": "Draw {draw}.",
+      "v": {
+        "draw": 2
+      }
+    },
+    "lullaby": {
+      "owner": "poppy",
+      "name": "Lullaby",
+      "cost": 1,
+      "text": "The enemy dozes: its next action is delayed a turn.",
+      "v": {}
+    },
+    "dreamEater": {
+      "owner": "poppy",
+      "name": "Dream Eater",
+      "cost": 1,
+      "text": "Deal {dmg} + 1 per Dream.",
+      "v": {
+        "dmg": 4
+      }
+    },
+    "wake": {
+      "owner": "poppy",
+      "name": "Wake",
+      "cost": 0,
+      "text": "Spend all Dreams: gain 1 energy per Dream.",
+      "v": {}
+    },
+    "nightcap": {
+      "owner": "poppy",
+      "name": "Nightcap",
+      "cost": 1,
+      "text": "Block {block}. Gain {dreams} Dream.",
+      "v": {
+        "block": 4,
+        "dreams": 1
+      }
+    },
+    "snooze": {
+      "owner": "poppy",
+      "name": "Snooze",
+      "cost": 0,
+      "text": "Gain {dreams} Dreams.",
+      "v": {
+        "dreams": 2
+      }
+    },
+    "sandSprinkle": {
+      "owner": "poppy",
+      "name": "Sand Sprinkle",
+      "cost": 2,
+      "text": "Deal {dmg}.",
+      "v": {
+        "dmg": 9
+      }
+    },
+    "pillowFort": {
+      "owner": "poppy",
+      "name": "Pillow Fort",
+      "cost": 1,
+      "text": "Block {block}.",
+      "v": {
+        "block": 7
+      }
+    },
+    "sweetDream": {
+      "owner": "poppy",
+      "name": "Sweet Dream",
+      "cost": 1,
+      "text": "Draw {draw}. Gain {dreams} Dream.",
+      "v": {
+        "draw": 2,
+        "dreams": 1
+      }
+    },
+    "kindle": {
+      "owner": "tallow",
+      "name": "Kindle",
+      "cost": 1,
+      "text": "Deal {dmg}. Burn.",
+      "burn": true,
+      "v": {
+        "dmg": 9
+      }
+    },
+    "flare": {
+      "owner": "tallow",
+      "name": "Flare",
+      "cost": 2,
+      "text": "Deal {dmg}. Burn.",
+      "burn": true,
+      "v": {
+        "dmg": 16
+      }
+    },
+    "waxShield": {
+      "owner": "tallow",
+      "name": "Wax Shield",
+      "cost": 1,
+      "text": "Block {block}. Burn.",
+      "burn": true,
+      "v": {
+        "block": 8
+      }
+    },
+    "melt": {
+      "owner": "tallow",
+      "name": "Melt",
+      "cost": 0,
+      "text": "Gain {energy} energy. Burn.",
+      "burn": true,
+      "v": {
+        "energy": 2
+      }
+    },
+    "votive": {
+      "owner": "tallow",
+      "name": "Votive",
+      "cost": 1,
+      "text": "Heal the active ghost {heal}. Burn.",
+      "burn": true,
+      "v": {
+        "heal": 6
+      }
+    },
+    "flicker": {
+      "owner": "tallow",
+      "name": "Flicker",
+      "cost": 1,
+      "text": "Deal {dmg}.",
+      "v": {
+        "dmg": 5
+      }
+    },
+    "drip": {
+      "owner": "tallow",
+      "name": "Drip",
+      "cost": 1,
+      "text": "Block {block}.",
+      "v": {
+        "block": 4
+      }
+    },
+    "rekindle": {
+      "owner": "tallow",
+      "name": "Rekindle",
+      "cost": 2,
+      "text": "Return all burned cards to the discard pile.",
+      "v": {}
+    }
+  },
+  "ghosts": {
+    "rue": {
+      "hp": 30,
+      "deck": {
+        "lashOut": 3,
+        "shroud": 2,
+        "haunt": 1,
+        "grimPatience": 1,
+        "retribution": 1
+      },
+      "pool": {
+        "spite": 1,
+        "simmer": 1,
+        "haunt": 1,
+        "lashOut": 1,
+        "grimPatience": 1
+      }
+    },
+    "sybil": {
+      "hp": 30,
+      "deck": {
+        "portent": 2,
+        "veil": 2,
+        "glimpse": 1,
+        "secondSight": 1,
+        "inevitability": 1,
+        "mendFate": 1
+      },
+      "pool": {
+        "doomsay": 1,
+        "twistOfFate": 1,
+        "portent": 1,
+        "inevitability": 1,
+        "veil": 1
+      }
+    },
+    "poppy": {
+      "hp": 30,
+      "deck": {
+        "lullaby": 1,
+        "dreamEater": 1,
+        "wake": 1,
+        "nightcap": 1,
+        "snooze": 1,
+        "sandSprinkle": 1,
+        "pillowFort": 1,
+        "sweetDream": 1
+      },
+      "pool": {
+        "lullaby": 1,
+        "dreamEater": 1,
+        "snooze": 1,
+        "sandSprinkle": 1,
+        "nightcap": 1
+      }
+    },
+    "tallow": {
+      "hp": 30,
+      "deck": {
+        "kindle": 1,
+        "flare": 1,
+        "waxShield": 1,
+        "melt": 1,
+        "flicker": 2,
+        "drip": 1,
+        "rekindle": 1
+      },
+      "pool": {
+        "votive": 1,
+        "kindle": 1,
+        "flare": 1,
+        "waxShield": 1,
+        "melt": 1
+      }
+    }
+  },
+  "enemies": {
+    "wisp": {
+      "name": "Will-o-Wisp",
+      "sprite": "✨",
+      "hp": 35,
+      "boss": false,
+      "desc": "A flickering mote. A gentle first seance.",
+      "pattern": [
+        {
+          "kind": "attack",
+          "amount": 4,
+          "name": "Flicker"
+        },
+        {
+          "kind": "attack",
+          "amount": 5,
+          "name": "Flare"
+        },
+        {
+          "kind": "block",
+          "amount": 4,
+          "name": "Gutter"
+        }
+      ]
+    },
+    "hound": {
+      "name": "Restless Hound",
+      "sprite": "🐺",
+      "hp": 60,
+      "boss": false,
+      "desc": "Bites, bites, then howls itself angrier.",
+      "pattern": [
+        {
+          "kind": "attack",
+          "amount": 8,
+          "name": "Bite"
+        },
+        {
+          "kind": "attack",
+          "amount": 8,
+          "name": "Bite"
+        },
+        {
+          "kind": "buff",
+          "amount": 2,
+          "name": "Howl"
+        }
+      ]
+    },
+    "mourner": {
+      "name": "Weeping Mourner",
+      "sprite": "😭",
+      "hp": 75,
+      "boss": false,
+      "desc": "Heals and grows stronger as it grieves. Race it down.",
+      "pattern": [
+        {
+          "kind": "heal",
+          "amount": 8,
+          "buff": 2,
+          "name": "Sob"
+        },
+        {
+          "kind": "attack",
+          "amount": 7,
+          "name": "Wail"
+        },
+        {
+          "kind": "attack",
+          "amount": 7,
+          "name": "Wail"
+        }
+      ]
+    },
+    "warden": {
+      "name": "Grave Warden",
+      "sprite": "🪦",
+      "hp": 90,
+      "boss": false,
+      "desc": "Slow and telegraphed — but the slam is enormous.",
+      "pattern": [
+        {
+          "kind": "attack",
+          "amount": 6,
+          "name": "Rattle"
+        },
+        {
+          "kind": "block",
+          "amount": 8,
+          "name": "Guard"
+        },
+        {
+          "kind": "windup",
+          "name": "Winds up…"
+        },
+        {
+          "kind": "attack",
+          "amount": 26,
+          "name": "SLAM"
+        }
+      ]
+    },
+    "bellkeeper": {
+      "name": "The Bellkeeper",
+      "sprite": "🔔",
+      "hp": 120,
+      "boss": true,
+      "desc": "Its toll rings through your whole party, and its Hush seals the active ghost. Rotate or perish.",
+      "pattern": [
+        {
+          "kind": "aoe",
+          "amount": 5,
+          "name": "Toll"
+        },
+        {
+          "kind": "hush",
+          "name": "Hush"
+        },
+        {
+          "kind": "attack",
+          "amount": 13,
+          "name": "Knell"
+        },
+        {
+          "kind": "buff",
+          "amount": 2,
+          "name": "Deepen"
+        }
+      ]
+    }
+  },
+  "ladder": [
+    "wisp",
+    "hound",
+    "mourner",
+    "warden",
+    "bellkeeper"
+  ],
+  "recruitAfter": [
+    0,
+    2
+  ]
+}
