@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#1b1033" />
+    <title>Grind City</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="./assets/index-BmvGEQ8W.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Doc9rmKs.css">
+  </head>
+  <body>
+    <div id="frame">
+      <canvas id="game"></canvas>
+      <div id="hud">
+        <div class="top">
+          <div id="score" class="hud-num">0</div>
+          <div id="dist" class="hud-num">0m</div>
+        </div>
+        <div id="combo" class="hud-num"></div>
+        <div id="cans"><svg class="can" viewBox="0 0 12 24" aria-hidden="true"><path d="M1 22.5V7l3-3.5V1.2L8.5.5 8 3.5 11 7v15.5z" fill="#1b1033"/><path d="M2.5 21V8h7v13z" fill="#f2c21a"/><path d="M2.5 8l2.3-2.8h2.4L9.500 8z" fill="#c9ccd0"/><path d="M2.5 19.500h7V21h-7z" fill="#6a63b8"/></svg><span class="hud-num" id="cans-n">0</span></div>
+      </div>
+      <div id="overlay" class="show">
+        <h1 class="logo" id="overlay-logo" role="img" aria-label="GRIND CITY"></h1>
+        <div class="stats" id="overlay-stats"></div>
+        <p class="blink hud-num" id="overlay-cta">TAP TO START</p>
+      </div>
+    </div>
+  </body>
+</html>
